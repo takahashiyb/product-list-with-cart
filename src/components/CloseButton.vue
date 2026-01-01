@@ -1,0 +1,49 @@
+<script setup>
+import { ref, defineProps } from 'vue'
+
+let isNotHovering = ref(true)
+
+const shape = defineProps({
+  shape: String,
+})
+
+function checkHover(e) {
+  isNotHovering.value = e.type === 'mouseleave'
+}
+</script>
+
+<template>
+  <button @mouseenter="checkHover($event)" @mouseleave="checkHover($event)">
+    <!-- Default: white plus on transparent -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="plus-icon" viewBox="0 0 10 10">
+      <path d="M2 2 L8 8 M8 2 L2 8" stroke="white" />
+    </svg>
+  </button>
+</template>
+
+<style scoped>
+button {
+  all: unset;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+button:hover {
+  border-color: hsl(var(--black-color));
+}
+
+button:hover path {
+  stroke: hsl(var(--black-color));
+}
+</style>
