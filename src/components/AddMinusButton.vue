@@ -10,7 +10,6 @@ const shape = defineProps({
 const symbol = {
   plus: 'M5 1 v8 M1 5 h8',
   minus: 'M1 5 h8',
-  close: 'M2 2 L8 8 M8 2 L2 8',
 }
 
 const svgPath = symbol[shape.shape]

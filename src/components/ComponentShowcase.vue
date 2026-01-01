@@ -12,11 +12,6 @@ import AddMinusButton from './AddMinusButton.vue'
   <div>
     <AddMinusButton :shape="'minus'"></AddMinusButton>
   </div>
-
-  <h2>Close Button</h2>
-  <div>
-    <AddMinusButton :shape="'close'"></AddMinusButton>
-  </div>
 </template>
 
 <style scoped>
