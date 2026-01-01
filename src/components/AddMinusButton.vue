@@ -10,6 +10,7 @@ const shape = defineProps({
 const symbol = {
   plus: 'M5 1 v8 M1 5 h8',
   minus: 'M1 5 h8',
+  close: 'M2 2 L8 8 M8 2 L2 8',
 }
 
 const svgPath = symbol[shape.shape]
@@ -34,13 +35,13 @@ function checkHover(e) {
     <!-- Hover: white background with transparent plus -->
     <svg xmlns="http://www.w3.org/2000/svg" class="cutout-icon" viewBox="0 0 10 10" v-else>
       <defs>
-        <mask id="plus-mask" maskUnits="userSpaceOnUse">
+        <mask id="mask" maskUnits="userSpaceOnUse">
           <rect width="10" height="10" fill="white" />
 
           <path :d="svgPath" stroke="black" />
         </mask>
       </defs>
-      <g mask="url(#plus-mask)">
+      <g mask="url(#mask)">
         <rect width="10" height="10" fill="white" />
       </g>
     </svg>
