@@ -1,11 +1,11 @@
 <script setup>
-  import { reactive } from 'vue';
+import { reactive } from 'vue'
 
-  const props = defineProps({
-    groups: Object,
-  });
+const props = defineProps({
+  groups: Object,
+})
 
-  const items = reactive(props.groups);
+const items = reactive(props.groups)
 </script>
 
 <template>
@@ -27,10 +27,7 @@
         <td>{{ item.name }}</td>
         <td>{{ item.pixels }}</td>
         <td>
-          <div
-            class="spacing-display"
-            :style="{ width: `var(${item.variable})` }"
-          ></div>
+          <div class="spacing-display" :style="{ width: `var(${item.variable})` }"></div>
         </td>
       </tr>
     </tbody>
@@ -38,42 +35,38 @@
 </template>
 
 <style scoped>
-  .text-content {
-    display: flex;
-    gap: 12px;
-  }
+.text-content {
+  display: flex;
+  gap: 12px;
+}
 
-  .spacing-display {
-    height: 42px;
-    background-color: hsl(var(--navy-050-color));
-  }
+.spacing-display {
+  height: 42px;
+  background-color: rosybrown;
+}
 
-  table {
-    width: 100%;
-  }
+table {
+  width: 100%;
+}
 
-  .th__name {
-    width: 50%;
-  }
+.th__name {
+  width: 50%;
+}
 
-  .th__pixels,
-  .th__display {
-    width: 25%;
-  }
+.th__pixels,
+.th__display {
+  width: 25%;
+}
 
-  th {
-    text-align: start;
-  }
+th {
+  text-align: start;
+}
 
-  p {
-    font: var(--font-preset-6-m);
-  }
+span {
+  display: inline-block;
+  text-transform: uppercase;
+  color: slategray;
 
-  span {
-    display: inline-block;
-    text-transform: uppercase;
-    color: slategray;
-
-    padding-right: 1em;
-  }
+  padding-right: 1em;
+}
 </style>

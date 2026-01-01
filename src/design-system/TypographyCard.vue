@@ -1,11 +1,11 @@
 <script setup>
-  import { reactive } from 'vue';
+import { reactive } from 'vue'
 
-  const props = defineProps({
-    groups: Object,
-  });
+const props = defineProps({
+  groups: Object,
+})
 
-  const items = reactive(props.groups);
+const items = reactive(props.groups)
 </script>
 
 <template>
@@ -29,32 +29,28 @@
 </template>
 
 <style scoped>
-  .container__typography {
-    display: flex;
-    flex-direction: column;
-    gap: 72px;
+.container__typography {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 
-    padding: 0;
-  }
+  padding: 0;
+}
 
-  .text-content {
-    display: flex;
-    gap: 12px;
-  }
+.text-content {
+  display: flex;
+  gap: 12px;
+}
 
-  h2 {
-    text-transform: capitalize;
-  }
+h2 {
+  text-transform: capitalize;
+}
 
-  p {
-    font: var(--font-preset-6-m);
-  }
+span {
+  display: inline-block;
+  text-transform: uppercase;
+  color: slategray;
 
-  span {
-    display: inline-block;
-    text-transform: uppercase;
-    color: slategray;
-
-    padding-right: 1em;
-  }
+  padding-right: 1em;
+}
 </style>

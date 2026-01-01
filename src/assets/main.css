@@ -1,0 +1,136 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Font                */
+/* ------------------- */
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url('/assets/fonts/RedHatText-VariableFont_wght.ttf');
+}
+
+/* ------------------- */
+/* Variables           */
+/* ------------------- */
+
+:root {
+  /* Colors */
+  /* Red */
+  --red-color: 14deg, 86%, 42%;
+  /* Rose */
+  --rose-900-color: 14deg, 65%, 9%;
+  --rose-500-color: 12deg, 20%, 44%;
+  --rose-400-color: 7deg, 20%, 60%;
+  --rose-300-color: 14deg, 25%, 72%;
+  --rose-100-color: 13deg, 31%, 94%;
+  --rose-050-color: 20deg, 50%, 98%;
+  /* Green */
+  --green-color: 159deg, 69%, 38%;
+  /* Black */
+  --black-color: 0deg, 0%, 0%;
+  /* White */
+  --white-color: 0deg, 0%, 100%;
+
+  /* Font */
+  --font-family: var(--font-family-1), var(--font-family-2), var(--font-family-3);
+  --font-family-1: 'Red Hat Text';
+  --font-family-2: sans-serif;
+  --font-family-3: 'Lucida Sans';
+
+  --font-size-1: 40px;
+  --font-size-2: 24px;
+  --font-size-3: 16px;
+  --font-size-4: 14px;
+
+  --font-weight-b: 700;
+  --font-weight-sb: 600;
+  --font-weight-r: 400;
+
+  --line-height-1: 1.2;
+  --line-height-2: 1.25;
+  --line-height-3: 1.5;
+
+  --font-preset-1: var(--font-weight-b) var(--font-size-1)/var(--line-height-1) var(--font-family-1);
+
+  --font-preset-2: var(--font-weight-b) var(--font-size-2)/var(--line-height-2) var(--font-family-1);
+
+  --font-preset-3: var(--font-weight-sb) var(--font-size-3)/var(--line-height-3)
+    var(--font-family-1);
+
+  --font-preset-4-r: var(--font-weight-r) var(--font-size-4)/var(--line-height-3)
+    var(--font-family-1);
+
+  --font-preset-4-b: var(--font-weight-sb) var(--font-size-4)/var(--line-height-3)
+    var(--font-family-1);
+
+  /* Spacing */
+  --spacing-1100: 5.5em;
+  --spacing-0500: 2.5em;
+  --spacing-0400: 2em;
+  --spacing-0300: 1.5em;
+  --spacing-0200: 1em;
+  --spacing-0150: 0.75em;
+  --spacing-0100: 0.5em;
+  --spacing-0050: 0.25em;
+}
+
+html {
+  font-family: var(--font-family);
+}

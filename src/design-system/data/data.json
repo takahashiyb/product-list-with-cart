@@ -15,85 +15,49 @@
         ]
       },
       {
-        "group": "Navy",
+        "group": "Rose",
         "list": [
           {
-            "name": "Navy 950",
-            "hex": "#303B59",
-            "rgb": "48, 59, 89",
-            "hsl": "224°, 30%, 27%",
-            "variable": "--navy-950-color"
+            "name": "Rose 900",
+            "hex": "#260F08",
+            "rgb": "38, 15, 8",
+            "hsl": "14°, 65%, 9%",
+            "variable": "--rose-900-color"
           },
           {
-            "name": "Navy 200",
-            "hex": "#CAC9FF",
-            "rgb": "202, 201, 255",
-            "hsl": "241°, 100%, 89%",
-            "variable": "--navy-200-color"
+            "name": "Rose 500",
+            "hex": "#87635A",
+            "rgb": "135, 99, 90",
+            "hsl": "12°, 20%, 44%",
+            "variable": "--rose-500-color"
           },
           {
-            "name": "Navy 50",
-            "hex": "#ECF2FF",
-            "rgb": "236, 242, 255",
-            "hsl": "221°, 100%, 96%",
-            "variable": "--navy-050-color"
-          }
-        ]
-      },
-      {
-        "group": "Blue",
-        "list": [
-          {
-            "name": "Blue 800",
-            "hex": "#1125D6",
-            "rgb": "17, 37, 214",
-            "hsl": "234°, 85%, 45%",
-            "variable": "--blue-800-color"
+            "name": "Rose 400",
+            "hex": "#AD8A85",
+            "rgb": "173, 138, 133",
+            "hsl": "7°, 20%, 60%",
+            "variable": "--rose-400-color"
           },
           {
-            "name": "Blue 50",
-            "hex": "#F3F4FD",
-            "rgb": "243, 244, 253",
-            "hsl": "234°, 71%, 97%",
-            "variable": "--blue-050-color"
-          }
-        ]
-      },
-      {
-        "group": "Yellow",
-        "list": [
-          {
-            "name": "Yellow 400",
-            "hex": "#FFB21E",
-            "rgb": "255, 178, 30",
-            "hsl": "39°, 100%, 56%",
-            "variable": "--yellow-800-color"
+            "name": "Rose 300",
+            "hex": "#CAAFA7",
+            "rgb": "202, 175, 167",
+            "hsl": "14°, 25%, 72%",
+            "variable": "--rose-300-color"
           },
           {
-            "name": "Yellow 50",
-            "hex": "#FFFBF4",
-            "rgb": "255, 251, 244",
-            "hsl": "38°, 100%, 98%",
-            "variable": "--yellow-050-color"
-          }
-        ]
-      },
-      {
-        "group": "Red",
-        "list": [
-          {
-            "name": "Red 400",
-            "hex": "#FF5555",
-            "rgb": "255, 85, 85",
-            "hsl": "0°, 100%, 67%",
-            "variable": "--red-400-color"
+            "name": "Rose 100",
+            "hex": "#F5EEEC",
+            "rgb": "245, 238, 236",
+            "hsl": "13°, 31%, 94%",
+            "variable": "--rose-100-color"
           },
           {
-            "name": "Red 50",
-            "hex": "#FFF6F6",
-            "rgb": "255, 246, 246",
-            "hsl": "0°, 100%, 98%",
-            "variable": "--red-050-color"
+            "name": "Rose 50",
+            "hex": "#FCF8F6",
+            "rgb": "252, 248, 246",
+            "hsl": "20°, 50%, 98%",
+            "variable": "--rose-050-color"
           }
         ]
       },
@@ -101,57 +65,32 @@
         "group": "Green",
         "list": [
           {
-            "name": "Green 500",
-            "hex": "#00BB8F",
-            "rgb": "0, 187, 143",
-            "hsl": "166°, 100%, 37%",
-            "variable": "--green-500-color"
-          },
-          {
-            "name": "Green 50",
-            "hex": "#F2FCF9",
-            "rgb": "242, 252, 249",
-            "hsl": "162°, 63%, 97%",
-            "variable": "--green-050-color"
+            "name": "Green",
+            "hex": "#1EA575",
+            "rgb": "30, 165, 117",
+            "hsl": "159°, 69%, 38%",
+            "variable": "--green-color"
           }
         ]
-      }
-    ]
-  },
-  {
-    "category": "gradients",
-    "groups": [
-      {
-        "group": "gradient 1",
-        "colors": {
-          "color 1": {
-            "hex": "#4D21C9",
-            "rgb": "77, 33, 201",
-            "hsl": "256°, 71%, 46%"
-          },
-          "color 2": {
-            "hex": "#2521C9",
-            "rgb": "37, 33, 201",
-            "hsl": "241°, 72%, 46%"
-          }
-        },
-        "variable": "--gradient-1"
       },
       {
-        "group": "gradient 2",
-        "colors": {
-          "color 1": {
-            "hex": "#7755FF",
-            "rgb": "119, 85, 255",
-            "hsl": "252°, 100%, 67%"
+        "group": "Black and White",
+        "list": [
+          {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0",
+            "hsl": "0°, 0%, 0%",
+            "variable": "--black-color"
           },
-          "color 2": {
-            "hex": "#2F2CE9",
-            "rgb": "47, 44, 233",
-            "hsl": "241°, 81%, 54%"
+          {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255",
+            "hsl": "0°, 0%, 100%",
+            "variable": "--white-color"
           }
-        },
-        "variable": "--gradient-2"
+        ]
       }
     ]
   },
@@ -160,87 +99,62 @@
     "groups": [
       {
         "name": "Text Preset 1",
-        "font-family": "Hanken Grotesk ExtraBold",
-        "font-size": "72px",
-        "line-height": "100%",
+        "font-family": "Red Hat Text Bold",
+        "font-size": "40px",
+        "line-height": "120%",
         "letter-spacing": "0px",
-        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "sample-text": "Lorem ipsum dolor sit amet, consectetur",
         "variable": "--font-preset-1"
       },
       {
         "name": "Text Preset 2",
-        "font-family": "Hanken Grotesk ExtraBold",
-        "font-size": "56px",
-        "line-height": "100%",
+        "font-family": "Red Hat Text Bold",
+        "font-size": "24px",
+        "line-height": "125%",
         "letter-spacing": "0px",
-        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "sample-text": "Lorem ipsum dolor sit amet, consectetur",
         "variable": "--font-preset-2"
       },
       {
         "name": "Text Preset 3",
-        "font-family": "Hanken Grotesk Bold",
-        "font-size": "32px",
-        "line-height": "130%",
+        "font-family": "Red Hat Text Semi Bold",
+        "font-size": "16px",
+        "line-height": "150%",
         "letter-spacing": "0px",
         "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.",
         "variable": "--font-preset-3"
       },
       {
         "name": "Text Preset 4",
-        "font-family": "Hanken Grotesk Bold",
-        "font-size": "24px",
-        "line-height": "130%",
+        "font-family": "Red Hat Text Regular",
+        "font-size": "14px",
+        "line-height": "150%",
         "letter-spacing": "0px",
         "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.",
-        "variable": "--font-preset-4"
+        "variable": "--font-preset-4-r"
       },
       {
-        "name": "Text Preset 5 (Bold)",
-        "font-family": "Hanken Grotesk Bold",
-        "font-size": "18px",
-        "line-height": "130%",
+        "name": "Text Preset 4 Bold",
+        "font-family": "Red Hat Text Semi Bold",
+        "font-size": "14px",
+        "line-height": "150%",
         "letter-spacing": "0px",
-        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
-        "variable": "--font-preset-5-b"
-      },
-      {
-        "name": "Text Preset 5 (Medium)",
-        "font-family": "Hanken Grotesk Medium",
-        "font-size": "18px",
-        "line-height": "130%",
-        "letter-spacing": "0px",
-        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
-        "variable": "--font-preset-5-m"
-      },
-      {
-        "name": "Text Preset 6 (Bold)",
-        "font-family": "Hanken Grotesk Bold",
-        "font-size": "16px",
-        "line-height": "130%",
-        "letter-spacing": "0px",
-        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
-        "variable": "--font-preset-6-b"
-      },
-      {
-        "name": "Text Preset 6 (Medium)",
-        "font-family": "Hanken Grotesk Medium",
-        "font-size": "16px",
-        "line-height": "130%",
-        "letter-spacing": "0px",
-        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
-        "variable": "--font-preset-6-m"
+        "sample-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "variable": "--font-preset-4-b"
       }
     ]
   },
   {
     "category": "Spacing",
     "groups": [
-      { "name": "spacing-0", "pixels": "0px", "variable": "--spacing-0000" },
-      { "name": "spacing-100", "pixels": "8px", "variable": "--spacing-0100" },
-      { "name": "spacing-200", "pixels": "16px", "variable": "--spacing-0200" },
-      { "name": "spacing-300", "pixels": "24px", "variable": "--spacing-0300" },
+      { "name": "spacing-1100", "pixels": "88px", "variable": "--spacing-1100" },
+      { "name": "spacing-500", "pixels": "40px", "variable": "--spacing-0500" },
       { "name": "spacing-400", "pixels": "32px", "variable": "--spacing-0400" },
-      { "name": "spacing-1000", "pixels": "80px", "variable": "--spacing-1000" }
+      { "name": "spacing-300", "pixels": "24px", "variable": "--spacing-0300" },
+      { "name": "spacing-200", "pixels": "16px", "variable": "--spacing-0200" },
+      { "name": "spacing-150", "pixels": "12px", "variable": "--spacing-0150" },
+      { "name": "spacing-100", "pixels": "8px", "variable": "--spacing-0100" },
+      { "name": "spacing-50", "pixels": "4px", "variable": "--spacing-0050" }
     ]
   }
 ]
