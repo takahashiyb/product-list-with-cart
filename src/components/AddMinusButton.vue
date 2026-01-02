@@ -50,8 +50,8 @@ function checkHover(e) {
 <style scoped>
 button {
   all: unset;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
