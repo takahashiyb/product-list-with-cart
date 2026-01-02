@@ -41,10 +41,10 @@ button svg {
 }
 
 button:hover {
-  border-color: hsl(var(--black-color));
+  border-color: hsl(var(--rose-900-color));
 }
 
 button:hover path {
-  stroke: hsl(var(--black-color));
+  stroke: hsl(var(--rose-900-color));
 }
 </style>

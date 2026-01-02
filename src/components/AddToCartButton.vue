@@ -51,6 +51,7 @@ function clickCartButton() {
   width: 160px;
   background-color: hsl(var(--white-color));
   font: var(--font-preset-4-b);
+  color: hsl(var(--rose-900-color));
 
   padding: var(--spacing-0150) var(--spacing-0300);
 
