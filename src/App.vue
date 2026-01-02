@@ -25,7 +25,9 @@ console.log(menu)
                 <source :srcset="`${item.image.tablet}`" media="(min-width:43.75em)" />
                 <img :src="`${item.image.mobile}`" />
               </picture>
-              <AddToCartButton></AddToCartButton>
+              <div class="container__button-add-to-cart">
+                <AddToCartButton></AddToCartButton>
+              </div>
             </div>
           </div>
           <h3>{{ item.category }}</h3>
@@ -49,6 +51,11 @@ console.log(menu)
   gap: var(--spacing-0400);
 
   padding: var(--spacing-0300);
+}
+
+h1 {
+  font: var(--font-preset-1);
+  color: hsl(var(--rose-900-color));
 }
 
 ul {
@@ -76,7 +83,7 @@ ul {
   border-radius: 8px;
 }
 
-:deep(.main__add-to-cart) {
+.container__button-add-to-cart {
   position: absolute;
   bottom: 0;
   left: 50%;
