@@ -133,4 +133,5 @@ select {
 
 html {
   font-family: var(--font-family);
+  color: hsl(var(--rose-900-color));
 }
