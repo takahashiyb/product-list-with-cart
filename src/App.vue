@@ -12,8 +12,6 @@ import { useCartStore } from './stores/counter'
 
 const menu = ref(listDessert)
 const cart = useCartStore()
-
-console.log(menu)
 </script>
 
 <template>
@@ -39,7 +37,7 @@ console.log(menu)
               </div>
             </div>
             <div>
-              <CloseButton></CloseButton>
+              <CloseButton :item="item"></CloseButton>
             </div>
             <hr />
           </li>

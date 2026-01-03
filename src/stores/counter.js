@@ -5,14 +5,6 @@ export const useCounterStore = defineStore('counter', () => {
   const count = ref(0)
   const doubleCount = computed(() => count.value * 2)
 
-  function increment() {
-    count.value++
-  }
-
-  function decrement() {
-    count.value--
-  }
-
   return { count, doubleCount, increment }
 })
 
@@ -43,33 +35,50 @@ export const useCartStore = defineStore('counter', {
         return (item.count * item.price).toFixed(2)
       }
     },
+    getAddCartCount(state) {
+      return (id) => {
+        const item = state.itemsCart.find((i) => i.name === id.name)
+        return !item ? 0 : item.count
+      }
+    },
   },
 
   actions: {
-    addCartList(item, countItem) {
+    addCartList(item, operation) {
       const itemCart = this.itemsCart.find((i) => i.name === item.name)
 
-      if (!itemCart) {
-        this.addNewCartItem(item, countItem)
-      } else {
-        itemCart.count = countItem
+      if (!itemCart && operation === 'plus') {
+        this.addNewCartItem(item)
+        return
       }
 
-      if (countItem === 0) {
+      if (operation === 'plus') {
+        itemCart.count++
+      }
+
+      if (operation === 'minus') {
+        itemCart.count--
+      }
+
+      if (itemCart.count === 0) {
         this.removeCartItem(item)
       }
     },
 
-    addNewCartItem(item, countItem) {
+    addNewCartItem(item) {
       this.itemsCart.push({
         name: item.name,
         price: item.price,
-        count: countItem,
+        count: 1,
       })
     },
 
     removeCartItem(item) {
       this.itemsCart = this.itemsCart.filter((i) => i.name !== item.name)
+    },
+
+    closeButton(item) {
+      this.removeCartItem(item)
     },
   },
 })

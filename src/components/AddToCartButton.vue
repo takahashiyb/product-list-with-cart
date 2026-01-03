@@ -12,8 +12,6 @@ const item = props.item
 
 const isAddCartButton = ref(true)
 
-const countAddCart = ref(0)
-
 const cart = useCartStore()
 
 function clickCartButton() {
@@ -21,20 +19,11 @@ function clickCartButton() {
 }
 
 function changeCount(operation) {
-  if (operation === 'plus') {
-    countAddCart.value++
-  }
+  cart.addCartList(item, operation)
 
-  if (countAddCart.value !== 0 && operation === 'minus') {
-    countAddCart.value--
+  if (cart.getAddCartCount(item) === 0) {
+    clickCartButton()
   }
-
-  cart.addCartList(item, countAddCart.value)
-
-  if (countAddCart.value !== 0) {
-    return
-  }
-  clickCartButton()
 }
 </script>
 
@@ -63,7 +52,7 @@ function changeCount(operation) {
   </button>
   <div class="container__quantity-select" v-else>
     <AddMinusButton :shape="'minus'" @change-count="changeCount"></AddMinusButton>
-    <span>{{ countAddCart }}</span>
+    <span>{{ cart.getAddCartCount(item) }}</span>
     <AddMinusButton :shape="'plus'" @change-count="changeCount"></AddMinusButton>
   </div>
 </template>
