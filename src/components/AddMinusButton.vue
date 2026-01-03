@@ -20,7 +20,11 @@ function checkHover(e) {
 </script>
 
 <template>
-  <button @mouseenter="checkHover($event)" @mouseleave="checkHover($event)">
+  <button
+    @mouseenter="checkHover($event)"
+    @mouseleave="checkHover($event)"
+    @click="$emit('changeCount', shape.shape)"
+  >
     <!-- Default: white plus on transparent -->
     <svg
       xmlns="http://www.w3.org/2000/svg"

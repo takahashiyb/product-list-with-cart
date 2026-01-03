@@ -2,13 +2,16 @@
 // import DesignSystem from '@/design-system/DesignSystem.vue'
 import listDessert from '@/data/data.json'
 
-import AddToCartButton from './components/AddToCartButton.vue'
 import CloseButton from './components/CloseButton.vue'
+import MenuList from './components/MenuList.vue'
 
 import { ref } from 'vue'
 import PrimaryButton from './components/PrimaryButton.vue'
 
+import { useCartStore } from './stores/counter'
+
 const menu = ref(listDessert)
+const cart = useCartStore()
 
 console.log(menu)
 </script>
@@ -17,42 +20,22 @@ console.log(menu)
   <!-- <DesignSystem></DesignSystem> -->
   <div class="section__main">
     <h1>Desserts</h1>
-    <section class="menu">
-      <ul>
-        <li v-for="item in menu" :key="item.name">
-          <div class="container__add-to-cart">
-            <div class="container__img">
-              <picture>
-                <source :srcset="`${item.image.desktop}`" media="(min-width:62.5em)" />
-                <source :srcset="`${item.image.tablet}`" media="(min-width:43.75em)" />
-                <img :src="`${item.image.mobile}`" />
-              </picture>
-              <div class="container__button-add-to-cart">
-                <AddToCartButton></AddToCartButton>
-              </div>
-            </div>
-          </div>
-          <h3>{{ item.category }}</h3>
-          <h4>
-            {{ item.name }}
-          </h4>
-          <p class="menu-item-price"><span>$</span>{{ item.price.toFixed(2) }}</p>
-        </li>
-      </ul>
-    </section>
+    <MenuList :menu="menu"></MenuList>
     <section class="cart">
-      <h2>Your Cart (7)</h2>
+      <h2>Your Cart ({{ cart.getCountTotal }})</h2>
       <div class="container__cart">
         <ul>
-          <li class="list-item__cart">
+          <li class="list-item__cart" v-for="item in cart.getItemsCart">
             <div class="font-preset-4-b">
-              <p>Classic Tiramisu</p>
+              <p>{{ item.name }}</p>
               <div class="container__item-cart">
-                <span class="red-text">1x</span>
+                <span class="red-text">{{ item.count }}x</span>
                 <span class="font-preset-4-r light-rose-text">
-                  <span>@ </span><span>$</span>5.50
+                  <span>@ </span><span>$</span>{{ cart.getPriceItemCart(item) }}
                 </span>
-                <span class="light-rose-text"> <span>$</span>5.50 </span>
+                <span class="light-rose-text">
+                  <span>$</span>{{ cart.getTotalPriceItemCart(item) }}
+                </span>
               </div>
             </div>
             <div>
@@ -64,7 +47,7 @@ console.log(menu)
       </div>
       <div class="container__total-cart">
         <span>Order Total</span>
-        <span class="font-preset-2">$46.50</span>
+        <span class="font-preset-2">${{ cart.getAmountTotal }}</span>
       </div>
       <div class="container__message-carbon-neutral">
         <img src="/assets/images/icon-carbon-neutral.svg" alt="icon carbon neurtral" />
@@ -85,44 +68,7 @@ console.log(menu)
   padding: var(--spacing-0300);
 }
 
-/* Menu */
-
-.container__add-to-cart {
-  padding-bottom: var(--spacing-0500);
-}
-
-.container__img {
-  width: 100%;
-  position: relative;
-  display: grid;
-  justify-content: center;
-}
-
-.container__img img {
-  height: 100%;
-  object-fit: contain;
-
-  border-radius: 8px;
-}
-
-.container__button-add-to-cart {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  translate: -50% 50%;
-}
-
-.menu-item-price {
-  font: var(--font-preset-3);
-  color: hsl(var(--red-color));
-}
-
 /* Cart */
-.cart {
-  display: grid;
-  gap: var(--spacing-0300);
-  padding: var(--spacing-0300);
-}
 
 .list-item__cart {
   display: grid;
@@ -158,15 +104,6 @@ h1 {
 h2 {
   font: var(--font-preset-2);
   color: hsl(var(--red-color));
-}
-
-h3 {
-  font: var(--font-preset-4-r);
-  color: hsl(var(--rose-500-color));
-}
-
-h4 {
-  font: var(--font-preset-3);
 }
 
 b {

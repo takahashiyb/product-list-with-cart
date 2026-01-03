@@ -1,11 +1,40 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 import AddMinusButton from './AddMinusButton.vue'
 
-let isAddCartButton = ref(true)
+import { useCartStore } from '../stores/counter'
+
+const props = defineProps({
+  item: Object,
+})
+
+const item = props.item
+
+const isAddCartButton = ref(true)
+
+const countAddCart = ref(0)
+
+const cart = useCartStore()
 
 function clickCartButton() {
-  isAddCartButton.value = !isAddCartButton
+  isAddCartButton.value = !isAddCartButton.value
+}
+
+function changeCount(operation) {
+  if (operation === 'plus') {
+    countAddCart.value++
+  }
+
+  if (countAddCart.value !== 0 && operation === 'minus') {
+    countAddCart.value--
+  }
+
+  cart.addCartList(item, countAddCart.value)
+
+  if (countAddCart.value !== 0) {
+    return
+  }
+  clickCartButton()
 }
 </script>
 
@@ -33,9 +62,9 @@ function clickCartButton() {
     <p>Add to Cart</p>
   </button>
   <div class="container__quantity-select" v-else>
-    <AddMinusButton :shape="'plus'"></AddMinusButton>
-    <span>1</span>
-    <AddMinusButton :shape="'minus'"></AddMinusButton>
+    <AddMinusButton :shape="'minus'" @change-count="changeCount"></AddMinusButton>
+    <span>{{ countAddCart }}</span>
+    <AddMinusButton :shape="'plus'" @change-count="changeCount"></AddMinusButton>
   </div>
 </template>
 
