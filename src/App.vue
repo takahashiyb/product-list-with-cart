@@ -9,6 +9,7 @@ import { ref } from 'vue'
 import PrimaryButton from './components/PrimaryButton.vue'
 
 import { useCartStore } from './stores/counter'
+import ConfirmationPopup from './components/ConfirmationPopup.vue'
 
 const menu = ref(listDessert)
 const cart = useCartStore()
@@ -16,6 +17,7 @@ const cart = useCartStore()
 
 <template>
   <!-- <DesignSystem></DesignSystem> -->
+  <ConfirmationPopup v-if="cart.isOpenConfirmationPage" />
   <div class="section__main">
     <h1>Desserts</h1>
     <MenuList :menu="menu"></MenuList>
@@ -52,7 +54,7 @@ const cart = useCartStore()
         <p class="font-preset-4-r">This is a <b>carbon-neutral</b> delivery</p>
       </div>
       <div class="container__confirm-order">
-        <PrimaryButton>Confirm Button</PrimaryButton>
+        <PrimaryButton @click="cart.openConfirmationPage()">Confirm Button</PrimaryButton>
       </div>
     </section>
   </div>
@@ -115,13 +117,6 @@ ul {
   gap: var(--spacing-0100);
 
   padding: 0;
-}
-
-hr {
-  height: 1px;
-  width: 100%;
-  margin: 0;
-  margin-top: var(--spacing-0100);
 }
 
 .font-preset-2 {

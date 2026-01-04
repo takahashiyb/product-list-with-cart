@@ -135,3 +135,12 @@ html {
   font-family: var(--font-family);
   color: hsl(var(--rose-900-color));
 }
+
+hr {
+  height: 1px;
+  width: 100%;
+  margin: 0;
+  margin-top: var(--spacing-0100);
+  background-color: hsl(var(--rose-100-color));
+  border-color: hsl(var(--rose-100-color));
+}

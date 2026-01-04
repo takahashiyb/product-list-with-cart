@@ -1,16 +1,10 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-
-  return { count, doubleCount, increment }
-})
-
 export const useCartStore = defineStore('counter', {
   state: () => ({
     itemsCart: [],
+    isOpenConfirmationPage: false,
   }),
 
   getters: {
@@ -41,6 +35,9 @@ export const useCartStore = defineStore('counter', {
         return !item ? 0 : item.count
       }
     },
+    isCartEmpty(state) {
+      return state.itemsCart.length === 0
+    },
   },
 
   actions: {
@@ -70,6 +67,7 @@ export const useCartStore = defineStore('counter', {
         name: item.name,
         price: item.price,
         count: 1,
+        image: item.image,
       })
     },
 
@@ -79,6 +77,13 @@ export const useCartStore = defineStore('counter', {
 
     closeButton(item) {
       this.removeCartItem(item)
+    },
+
+    openConfirmationPage() {
+      this.isOpenConfirmationPage = true
+    },
+    closeConfirmationPage() {
+      this.isOpenConfirmationPage = false
     },
   },
 })
