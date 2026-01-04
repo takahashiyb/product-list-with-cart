@@ -51,7 +51,11 @@ function changeCount(operation) {
     <p>Add to Cart</p>
   </button>
   <div class="container__quantity-select" v-else>
-    <AddMinusButton :shape="'minus'" @change-count="changeCount"></AddMinusButton>
+    <AddMinusButton
+      :shape="'minus'"
+      @change-count="changeCount"
+      v-bind="cart.getAddCartCount(item) === 0 ? { inert: true, disabled: true } : {}"
+    ></AddMinusButton>
     <span>{{ cart.getAddCartCount(item) }}</span>
     <AddMinusButton :shape="'plus'" @change-count="changeCount"></AddMinusButton>
   </div>

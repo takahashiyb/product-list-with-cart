@@ -52,7 +52,7 @@ export const useCartStore = defineStore('cart', {
         itemCart.count++
       }
 
-      if (operation === 'minus') {
+      if (itemCart !== undefined && operation === 'minus') {
         itemCart.count--
       }
 
