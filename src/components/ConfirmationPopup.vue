@@ -67,7 +67,7 @@ const cart = useCartStore()
           </div>
         </div>
         <div class="container__button-start_new">
-          <PrimaryButton @click="cart.closeConfirmationPage()">Start New Order</PrimaryButton>
+          <PrimaryButton @click="cart.$reset()">Start New Order</PrimaryButton>
         </div>
       </div>
     </div>
@@ -132,6 +132,11 @@ const cart = useCartStore()
 
 .container__img-item img {
   height: 48px;
+}
+
+.container__item-cart {
+  display: flex;
+  gap: var(--spacing-0100);
 }
 
 .container__order-total {
