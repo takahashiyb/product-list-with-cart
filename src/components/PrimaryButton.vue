@@ -10,6 +10,7 @@
 button {
   background-color: hsl(var(--red-color));
   color: hsl(var(--white-color));
+  cursor: pointer;
 
   font: var(--font-preset-3);
 

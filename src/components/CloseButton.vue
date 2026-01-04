@@ -39,6 +39,7 @@ button {
   overflow: hidden;
   cursor: pointer;
   border: 2px solid hsl(var(--rose-400-color));
+  cursor: pointer;
 }
 
 button svg {
