@@ -26,7 +26,7 @@ const cart = useCartStore()
       <div class="container__cart">
         <ul>
           <li class="list-item__cart" v-for="item in cart.getItemsCart">
-            <div class="font-preset-4-b">
+            <div class="font-preset-4-b item-cart">
               <p>{{ item.name }}</p>
               <div class="container__item-cart">
                 <span class="red-text">{{ item.count }}x</span>
@@ -70,15 +70,26 @@ const cart = useCartStore()
 
 /* Cart */
 
+.cart {
+  display: grid;
+  padding: var(--spacing-0300);
+  gap: var(--spacing-0300);
+}
+
 .list-item__cart {
   display: grid;
   grid-template-columns: 1fr min-content;
   align-items: center;
 }
 
+.item-cart {
+  display: grid;
+  gap: var(--spacing-0200);
+}
+
 .container__item-cart {
   display: flex;
-  gap: var(--spacing-0050);
+  gap: var(--spacing-0150);
 }
 
 .container__total-cart {
@@ -90,6 +101,12 @@ const cart = useCartStore()
   display: flex;
   justify-content: center;
   gap: var(--spacing-0050);
+
+  background-color: hsl(var(--rose-050-color));
+
+  padding: var(--spacing-0200);
+
+  border-radius: 8px;
 }
 
 .container__confirm-order {
@@ -117,6 +134,10 @@ ul {
   gap: var(--spacing-0100);
 
   padding: 0;
+}
+
+hr {
+  grid-column: 1/-1;
 }
 
 .font-preset-2 {
