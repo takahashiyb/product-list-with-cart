@@ -82,4 +82,10 @@ ul {
 
   padding: 0;
 }
+
+@media (min-width: 43.75em) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 </style>

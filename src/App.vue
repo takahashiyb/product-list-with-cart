@@ -159,4 +159,24 @@ hr {
 .light-rose-text {
   color: hsl(var(--rose-500-color));
 }
+
+@media (min-width: 62.5em) {
+  .section__main {
+    display: grid;
+    grid-template-columns: 1fr 384px;
+    gap: var(--spacing-0300);
+
+    max-width: 1216px;
+
+    margin-inline: auto;
+  }
+
+  .cart {
+    align-content: start;
+  }
+
+  h1 {
+    grid-column: 1/-1;
+  }
+}
 </style>

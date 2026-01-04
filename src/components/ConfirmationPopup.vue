@@ -192,4 +192,18 @@ h1 {
 hr {
   grid-column: 1/-1;
 }
+
+@media (min-width: 43.75em) {
+  .popup__order-confirmation {
+    bottom: 50%;
+    left: 50%;
+    translate: -50% 50%;
+
+    height: 43em;
+    width: 43em;
+    background-color: hsl(var(--white-color));
+
+    border-radius: 12px;
+  }
+}
 </style>
